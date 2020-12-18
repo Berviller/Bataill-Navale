@@ -1,1 +1,35 @@
 Ceci est la branche main
+Le projet est décomposé de la façon suivante :
+Il y a 2 packages :
+-1 package default contenant qui contient:
+	- le main Client qui s'occuper de connecter le client au serveur
+	- un ListeningThread qui écoute en permence les messages qui circulent
+
+-1 package Serveur qui contient:
+	-SocketServeur qui s'occupe de connecter 2 clients entre eux
+	-L'objet Plateau
+	-un ThreadBataille
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+L'objet Plateau est un tableau d'entiers. Il dispose des méthodes suivantes :
+- initialisation : initialise le plateau de jeu en associant le pointeur "plateau" à un tableau d'entier de 10 colonnes et 10 lignes contenant que des 0 dans chaque cases.
+- placement : prenant en entrée la longueur du bateau "l", le sens de positionnement "s" qui est soit 0 soit 1, la colonne de placement de la tête du bateau "ligne", 
+la ligne de placement de la tête du bateau "colonne". Elle ne retourne rien.
+- attaquer : prenant en entrée la colonne de la case à attaquer "c", la ligne de placement de la tête du bateau "l".
+En fonction du cas elle retourne les entier 0, 1 ou 2. Ces valeurs auraient du servir à permettre de savoir l'image à afficher sur une interface graphique qui n'as pas était programmée.
+- affichage : permet de transformer le tableau du plateau en une chaine de charactères affichable sur la console.
+
+Les valeurs contenues dans les cases du tableau représentent les chose suivantes :
+0 : case vide/eau
+1 : présence d'un bateau
+2 : bateau touché
+3 : bateau coulé
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+La classe ThreadBataille contient les méthodes suivantes :
+-ThreadBataille(int id,Socket client1, Socket client2) : permet de définir les entrées et sorties
+- run : programme principale sensé gérer toutes les opérations. Pour le moment seul le placement d'un bateau sur n'importe quel client et l'attaque d'une case fonctionne.
+L'utilisateur peux choisir entre 3 actions : attaquer, placer un bateau et envoyer un message. Seul des controles sur les paramêtres d'entrée des fonction de placement et d'attaque
+sont réalisés.
