@@ -133,6 +133,7 @@ public void run() {
 				plateau11.placement(l1, s1, colonne1, ligne1);
 				break;
 			case "2":
+				
 				break;
 		}
 		out1.println("Votre plateau :\n");
@@ -194,6 +195,7 @@ public void run() {
 				plateau22.placement(l2, s2, colonne2, ligne2);
 				break;
 			case "2":
+				
 				break;
 		}
 		out2.println("Votre plateau :\n");

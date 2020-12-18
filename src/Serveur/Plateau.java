@@ -48,13 +48,16 @@ public class Plateau {
 	}
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 	public String affichage () {
-		String liste = "";
+		String liste = "   A   B   C   D   E   F   G   H   I   J \n";
+		liste += "   _   _   _   _   _   _   _   _   _   _ \n";
 		  for (int i = 0;i < plateau.length; i++) {
+			  liste += i+" ";
 			  for (int j = 0;j < plateau[i].length;j++) {
 				  liste += "|" + plateau[i][j] + "|" + " ";
 			  }
 			  liste += "\n";
 		  }
+		  liste += "   ¯   ¯   ¯   ¯   ¯   ¯   ¯   ¯   ¯   ¯ ";
 		            
 		return liste;
 	}
