@@ -71,15 +71,10 @@ public void run() {
 		out2.println("Plateau adverse :\n");
 		out2.println(plateau21.affichage());
 		
-		//information des actions possibles
+		//information des actions possibles et traitement de ces actions chez le joueur 1
 		out1.println("Veuillez choisir l'action que vous souhaitez réaliser :\n-1 : Placer un bateau\n-2 : Attaquer\n-3 : Envoyer un message");
-		out2.println("Veuillez choisir l'action que vous souhaitez réaliser :\n-1 : Placer un bateau\n-2 : Attaquer\n-3 : Envoyer un message");
-		
-		
-		
-		
-		
 		int num_action_j1 = in1.read();
+		out1.println(num_action_j1);
 		if(num_action_j1 == 1) {
 			out1.println("veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
 			int l1 = in1.read();
@@ -101,7 +96,7 @@ public void run() {
 			colonne1-=1;
 			out1.println("veuillez entrer ligne de placement de la tête du bateau (compris entre 1 et 10) : ");
 			int ligne1 = in1.read();
-			while(l1!=1 || l1!=2 || l1!=3 || l1!=4 || l1!=5 || l1!=6 || l1!=7 || l1!=8 || l1!=9 || l1!=10) {
+			while(ligne1!=1 || ligne1!=2 || ligne1!=3 || ligne1!=4 || ligne1!=5 || ligne1!=6 || ligne1!=7 || ligne1!=8 || ligne1!=9 || ligne1!=10) {
 				out1.println("Valleur incorrecte, veuillez entrer ligne de placement de la tête du bateau (compris entre 1 et 10) : ");
 				ligne1 = in1.read();
 			}
@@ -111,10 +106,41 @@ public void run() {
 		String message1=in1.readLine();
 		message1="Partie "+id+", Joueur 1 : "+message1;
 		System.out.println(message1);
+		
+		
+		
+		//information des actions possibles et traitement de ces actions chez le joueur 2
+		out2.println("Veuillez choisir l'action que vous souhaitez réaliser :\n-1 : Placer un bateau\n-2 : Attaquer\n-3 : Envoyer un message");
 		int num_action_j2 = in2.read();
 		if(num_action_j2 == 1) {
-			
+			out2.println("veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
+			int l2 = in2.read();
+			while(l2!=2 || l2!=3 || l2!=4 || l2!=5) {
+				out2.println("Valleur incorrecte, veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
+				l2 = in2.read();
+			}
+			out2.println("veuillez entrer le sense du bateau (0 = tête du pateau en haut, 1 = tête du bateau à gauche) : ");
+			int s2 = in2.read();
+			while (s2!=0 || s2!=1) {
+				
+			}
+			out2.println("veuillez entrer colonne de placement de la tête du bateau (compris entre 1 et 10) : ");
+			int colonne2 = in2.read(); 
+			while(colonne2!=1 || colonne2!=2 || colonne2!=3 || colonne2!=4 || colonne2!=5 || colonne2!=6 || colonne2!=7 || colonne2!=8 || colonne2!=9 || colonne2!=10) {
+				out2.println("Valleur incorrecte, veuillez entrer colonne de placement de la tête du bateau (compris entre 1 et 10) : ");
+				colonne2 = in2.read();
+			}
+			colonne2-=1;
+			out2.println("veuillez entrer ligne de placement de la tête du bateau (compris entre 1 et 10) : ");
+			int ligne2 = in2.read();
+			while(ligne2!=1 || ligne2!=2 || ligne2!=3 || ligne2!=4 || ligne2!=5 || ligne2!=6 || ligne2!=7 || ligne2!=8 || ligne2!=9 || ligne2!=10) {
+				out2.println("Valleur incorrecte, veuillez entrer ligne de placement de la tête du bateau (compris entre 1 et 10) : ");
+				ligne2 = in2.read();
+			}
+			ligne2-=1;
+			plateau11.placement(l2, s2, colonne2, ligne2);
 		}
+		out2.println("Veuillez choisir l'action que vous souhaitez réaliser :\n-1 : Placer un bateau\n-2 : Attaquer\n-3 : Envoyer un message");
 		String message2=in2.readLine();
 		message2="Partie "+id+", Joueur 2 : "+message2;
 		System.out.println(message2);
