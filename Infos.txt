@@ -30,6 +30,6 @@ Les valeurs contenues dans les cases du tableau représentent les chose suivante
 
 La classe ThreadBataille contient les méthodes suivantes :
 -ThreadBataille(int id,Socket client1, Socket client2) : permet de définir les entrées et sorties
-- run : programme principale sensé gérer toutes les opérations. Pour le moment seul le placement d'un bateau sur n'importe quel client et l'attaque d'une case fonctionne.
+- run : programme principale sensé gérer toutes les opérations.
 L'utilisateur peux choisir entre 3 actions : attaquer, placer un bateau et envoyer un message. Seul des controles sur les paramêtres d'entrée des fonction de placement et d'attaque
-sont réalisés.
+sont réalisés. Attentions : les actions sont au tour par tour : le joueur 1 fait son action, puis uniquement le joueur 2 peux faire son action, puis le joueur 1, etc...
