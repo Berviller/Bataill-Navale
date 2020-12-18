@@ -162,22 +162,20 @@ public void run() {
 			case "3" :
 				out1.println("veuillez écrire votre message : ");
 				String messagej1 = in1.readLine();
+				messagej1="Partie "+id+", Joueur 1 : "+messagej1;
 				System.out.println(messagej1);
 				out2.println(messagej1);
 				break;
 		}
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		out1.println("Votre plateau :\n");
 		out1.println(plateau11.affichage());
 		
 		out1.println("Plateau adverse :\n");
 		out1.println(plateau12.affichage());
 		
-		
-		String message1=in1.readLine();
-		message1="Partie "+id+", Joueur 1 : "+message1;
-		System.out.println(message1);
-		
-		
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		
 		//information des actions possibles et traitement de ces actions chez le joueur 2
 		out2.println("Veuillez choisir l'action que vous souhaitez réaliser :\n-1 : Placer un bateau\n-2 : Attaquer\n-3 : Envoyer un message");
@@ -259,6 +257,7 @@ public void run() {
 				out1.println(messagej2);
 				break;
 		}
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		out2.println("Votre plateau :\n");
 		out2.println(plateau11.affichage());
 		
