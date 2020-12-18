@@ -33,3 +33,4 @@ La classe ThreadBataille contient les méthodes suivantes :
 - run : programme principale sensé gérer toutes les opérations.
 L'utilisateur peux choisir entre 3 actions : attaquer, placer un bateau et envoyer un message. Seul des controles sur les paramêtres d'entrée des fonction de placement et d'attaque
 sont réalisés. Attentions : les actions sont au tour par tour : le joueur 1 fait son action, puis uniquement le joueur 2 peux faire son action, puis le joueur 1, etc...
+De plus il est possible de placer un bateau dans un autre.
