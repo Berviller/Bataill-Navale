@@ -158,6 +158,13 @@ public void run() {
 				plateau12.attaquer(c1, lig1);
 				plateau22.attaquer(c1, lig1);
 				break;
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			case "3" :
+				out1.println("veuillez écrire votre message : ");
+				String messagej1 = in1.readLine();
+				System.out.println(messagej1);
+				out2.println(messagej1);
+				break;
 		}
 		out1.println("Votre plateau :\n");
 		out1.println(plateau11.affichage());
@@ -243,6 +250,14 @@ public void run() {
 				plateau21.attaquer(c2, lig2);
 				plateau11.attaquer(c2, lig2);
 				break;
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			case "3" :
+				out2.println("veuillez écrire votre message : ");
+				String messagej2 = in2.readLine();
+				messagej2="Partie "+id+", Joueur 2 : "+messagej2;
+				System.out.println(messagej2);
+				out1.println(messagej2);
+				break;
 		}
 		out2.println("Votre plateau :\n");
 		out2.println(plateau11.affichage());
@@ -250,11 +265,6 @@ public void run() {
 		out2.println("Plateau adverse :\n");
 		out2.println(plateau12.affichage());
 		
-		
-		out2.println("Veuillez choisir l'action que vous souhaitez réaliser :\n-1 : Placer un bateau\n-2 : Attaquer\n-3 : Envoyer un message");
-		String message2=in2.readLine();
-		message2="Partie "+id+", Joueur 2 : "+message2;
-		System.out.println(message2);
 	}
 	}catch (Exception e) {}
 }
