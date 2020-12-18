@@ -78,31 +78,40 @@ public void run() {
 		switch (num_action_j1) {
 			case "1" :
 				out1.println("veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
-				int l1 = in1.read();
+				String strl1 = in1.readLine();
+				int l1 = Integer.parseInt(strl1);
 				while(l1!=2 || l1!=3 || l1!=4 || l1!=5) {
 					out1.println("Valleur incorrecte, veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
 					l1 = in1.read();
 				}
+				
 				out1.println("veuillez entrer le sense du bateau (0 = tête du pateau en haut, 1 = tête du bateau à gauche) : ");
-				int s1 = in1.read();
+				String strs1 = in1.readLine();
+				int s1 = Integer.parseInt(strs1);
 				while (s1!=0 || s1!=1) {
 					
 				}
+				
 				out1.println("veuillez entrer colonne de placement de la tête du bateau (compris entre 1 et 10) : ");
-				int colonne1 = in1.read(); 
+				String strcolonne1 = in1.readLine();
+				int colonne1 = Integer.parseInt(strcolonne1);
 				while(colonne1!=1 || colonne1!=2 || colonne1!=3 || colonne1!=4 || colonne1!=5 || colonne1!=6 || colonne1!=7 || colonne1!=8 || colonne1!=9 || colonne1!=10) {
 					out1.println("Valleur incorrecte, veuillez entrer colonne de placement de la tête du bateau (compris entre 1 et 10) : ");
 					colonne1 = in1.read();
 				}
 				colonne1-=1;
+				
 				out1.println("veuillez entrer ligne de placement de la tête du bateau (compris entre 1 et 10) : ");
-				int ligne1 = in1.read();
+				String strligne1 = in1.readLine();
+				int ligne1 = Integer.parseInt(strligne1);
 				while(ligne1!=1 || ligne1!=2 || ligne1!=3 || ligne1!=4 || ligne1!=5 || ligne1!=6 || ligne1!=7 || ligne1!=8 || ligne1!=9 || ligne1!=10) {
 					out1.println("Valleur incorrecte, veuillez entrer ligne de placement de la tête du bateau (compris entre 1 et 10) : ");
 					ligne1 = in1.read();
 				}
 				ligne1-=1;
+				
 				plateau11.placement(l1, s1, colonne1, ligne1);
+			case "2":
 		}
 		String message1=in1.readLine();
 		message1="Partie "+id+", Joueur 1 : "+message1;
