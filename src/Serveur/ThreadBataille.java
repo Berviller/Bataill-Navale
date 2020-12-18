@@ -89,6 +89,7 @@ public void run() {
 		String num_action_j1 = in1.readLine();
 		out1.println(num_action_j1);
 		switch (num_action_j1) {
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 			case "1" :
 				out1.println("veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
 				String strl1 = in1.readLine();
@@ -132,8 +133,30 @@ public void run() {
 				
 				plateau11.placement(l1, s1, colonne1, ligne1);
 				break;
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 			case "2":
+				out1.println("veuillez indiquer le numéro colonne de la case que vous voulez attaquer :");
+				String strc1 = in1.readLine();
+				int c1 = Integer.parseInt(strc1);
+				while(c1!=1 && c1!=2 && c1!=3 && c1!=4 && c1!=5 && c1!=6 && c1!=7 && c1!=8 && c1!=9 && c1!=10) {
+					out1.println("Valleur incorrecte, veuillez indiquer le numéro colonne de la case que vous voulez attaquer (compris entre 1 et 10) : ");
+					strc1 = in1.readLine();
+					c1 = Integer.parseInt(strc1);
+				}
+				c1-=1;
 				
+				out1.println("veuillez indiquer le numéro ligne de la case que vous voulez attaquer (compris entre 1 et 10) : ");
+				String strlig1 = in1.readLine();
+				int lig1 = Integer.parseInt(strlig1);
+				while(lig1!=1 && lig1!=2 && lig1!=3 && lig1!=4 && lig1!=5 && lig1!=6 && lig1!=7 && lig1!=8 && lig1!=9 && lig1!=10) {
+					out1.println("Valleur incorrecte, veuillez indiquer le numéro ligne de la case que vous voulez attaquer (compris entre 1 et 10) : ");
+					strlig1 = in1.readLine();
+					lig1 = Integer.parseInt(strlig1);
+				}
+				lig1-=1;
+				
+				plateau12.attaquer(c1, lig1);
+				plateau22.attaquer(c1, lig1);
 				break;
 		}
 		out1.println("Votre plateau :\n");
@@ -153,6 +176,7 @@ public void run() {
 		out2.println("Veuillez choisir l'action que vous souhaitez réaliser :\n-1 : Placer un bateau\n-2 : Attaquer\n-3 : Envoyer un message");
 		String num_action_j2 = in2.readLine();
 		switch(num_action_j2) {
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 			case "1" :
 				out2.println("veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
 				String strl2 = in1.readLine();
@@ -194,8 +218,30 @@ public void run() {
 				
 				plateau22.placement(l2, s2, colonne2, ligne2);
 				break;
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 			case "2":
+				out2.println("veuillez indiquer le numéro colonne de la case que vous voulez attaquer :");
+				String strc2 = in2.readLine();
+				int c2 = Integer.parseInt(strc2);
+				while(c2!=1 && c2!=2 && c2!=3 && c2!=4 && c2!=5 && c2!=6 && c2!=7 && c2!=8 && c2!=9 && c2!=10) {
+					out2.println("Valleur incorrecte, veuillez indiquer le numéro colonne de la case que vous voulez attaquer (compris entre 1 et 10) : ");
+					strc2 = in2.readLine();
+					c2 = Integer.parseInt(strc2);
+				}
+				c2-=1;
 				
+				out2.println("veuillez indiquer le numéro ligne de la case que vous voulez attaquer (compris entre 1 et 10) : ");
+				String strlig2 = in2.readLine();
+				int lig2 = Integer.parseInt(strlig2);
+				while(lig2!=1 && lig2!=2 && lig2!=3 && lig2!=4 && lig2!=5 && lig2!=6 && lig2!=7 && lig2!=8 && lig2!=9 && lig2!=10) {
+					out2.println("Valleur incorrecte, veuillez indiquer le numéro ligne de la case que vous voulez attaquer (compris entre 1 et 10) : ");
+					strlig2 = in2.readLine();
+					lig2 = Integer.parseInt(strlig2);
+				}
+				lig2-=1;
+				
+				plateau21.attaquer(c2, lig2);
+				plateau11.attaquer(c2, lig2);
 				break;
 		}
 		out2.println("Votre plateau :\n");

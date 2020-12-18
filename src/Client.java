@@ -13,7 +13,7 @@ public class Client {
 			Scanner sc=new Scanner(System.in);
 
 			String message="";
-			while (message!="quit") {
+			while (message!="q") {
 			message=sc.nextLine();
 			out.println(message);
 			}
