@@ -80,16 +80,18 @@ public void run() {
 				out1.println("veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
 				String strl1 = in1.readLine();
 				int l1 = Integer.parseInt(strl1);
-				while(l1!=2 || l1!=3 || l1!=4 || l1!=5) {
+				out1.println("vous avez entrer : "+ l1);
+				while(l1!=2 && l1!=3 && l1!=4 && l1!=5) {
 					out1.println("Valleur incorrecte, veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
 					strl1 = in1.readLine();
 					l1 = Integer.parseInt(strl1);
+					out1.println("vous avez entrer : "+ l1);
 				}
 				
 				out1.println("veuillez entrer le sense du bateau (0 = tête du pateau en haut, 1 = tête du bateau à gauche) : ");
 				String strs1 = in1.readLine();
 				int s1 = Integer.parseInt(strs1);
-				while (s1!=0 || s1!=1) {
+				while (s1!=0 && s1!=1) {
 					out1.println("Valleur incorrecte, veuillez entrer le sense du bateau (0 = tête du pateau en haut, 1 = tête du bateau à gauche) : ");
 					strs1 = in1.readLine();
 					s1 = Integer.parseInt(strs1);
@@ -98,7 +100,7 @@ public void run() {
 				out1.println("veuillez entrer colonne de placement de la tête du bateau (compris entre 1 et 10) : ");
 				String strcolonne1 = in1.readLine();
 				int colonne1 = Integer.parseInt(strcolonne1);
-				while(colonne1!=1 || colonne1!=2 || colonne1!=3 || colonne1!=4 || colonne1!=5 || colonne1!=6 || colonne1!=7 || colonne1!=8 || colonne1!=9 || colonne1!=10) {
+				while(colonne1!=1 && colonne1!=2 && colonne1!=3 && colonne1!=4 && colonne1!=5 && colonne1!=6 && colonne1!=7 && colonne1!=8 && colonne1!=9 && colonne1!=10) {
 					out1.println("Valleur incorrecte, veuillez entrer colonne de placement de la tête du bateau (compris entre 1 et 10) : ");
 					strcolonne1 = in1.readLine();
 					colonne1 = Integer.parseInt(strcolonne1);
@@ -108,7 +110,7 @@ public void run() {
 				out1.println("veuillez entrer ligne de placement de la tête du bateau (compris entre 1 et 10) : ");
 				String strligne1 = in1.readLine();
 				int ligne1 = Integer.parseInt(strligne1);
-				while(ligne1!=1 || ligne1!=2 || ligne1!=3 || ligne1!=4 || ligne1!=5 || ligne1!=6 || ligne1!=7 || ligne1!=8 || ligne1!=9 || ligne1!=10) {
+				while(ligne1!=1 && ligne1!=2 && ligne1!=3 && ligne1!=4 && ligne1!=5 && ligne1!=6 && ligne1!=7 && ligne1!=8 && ligne1!=9 && ligne1!=10) {
 					out1.println("Valleur incorrecte, veuillez entrer ligne de placement de la tête du bateau (compris entre 1 et 10) : ");
 					strligne1 = in1.readLine();
 					ligne1 = Integer.parseInt(strligne1);
@@ -132,7 +134,7 @@ public void run() {
 				out1.println("veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
 				String strl2 = in1.readLine();
 				int l2 = Integer.parseInt(strl2);
-				while(l2!=2 || l2!=3 || l2!=4 || l2!=5) {
+				while(l2!=2 && l2!=3 && l2!=4 && l2!=5) {
 					out1.println("Valleur incorrecte, veuillez entrer la longueur du bateau (comprise entre 2 et 5) : ");
 					strl2 = in2.readLine();
 					l2 = Integer.parseInt(strl2);
@@ -141,7 +143,7 @@ public void run() {
 				out1.println("veuillez entrer le sense du bateau (0 = tête du pateau en haut, 1 = tête du bateau à gauche) : ");
 				String strs2 = in2.readLine();
 				int s2 = Integer.parseInt(strs2);
-				while (s2!=0 || s2!=1) {
+				while (s2!=0 && s2!=1) {
 					out1.println("Valleur incorrecte, veuillez entrer le sense du bateau (0 = tête du pateau en haut, 1 = tête du bateau à gauche) : ");
 					strs2 = in2.readLine();
 					s2 = Integer.parseInt(strs2);
@@ -150,7 +152,7 @@ public void run() {
 				out1.println("veuillez entrer colonne de placement de la tête du bateau (compris entre 1 et 10) : ");
 				String strcolonne2 = in2.readLine();
 				int colonne2 = Integer.parseInt(strcolonne2);
-				while(colonne2!=1 || colonne2!=2 || colonne2!=3 || colonne2!=4 || colonne2!=5 || colonne2!=6 || colonne2!=7 || colonne2!=8 || colonne2!=9 || colonne2!=10) {
+				while(colonne2!=1 && colonne2!=2 && colonne2!=3 && colonne2!=4 && colonne2!=5 && colonne2!=6 && colonne2!=7 && colonne2!=8 && colonne2!=9 && colonne2!=10) {
 					out2.println("Valleur incorrecte, veuillez entrer colonne de placement de la tête du bateau (compris entre 1 et 10) : ");
 					strcolonne2 = in2.readLine();
 					colonne2 = Integer.parseInt(strcolonne2);
@@ -160,7 +162,7 @@ public void run() {
 				out1.println("veuillez entrer ligne de placement de la tête du bateau (compris entre 1 et 10) : ");
 				String strligne2 = in2.readLine();
 				int ligne2 = Integer.parseInt(strligne2);
-				while(ligne2!=1 || ligne2!=2 || ligne2!=3 || ligne2!=4 || ligne2!=5 || ligne2!=6 || ligne2!=7 || ligne2!=8 || ligne2!=9 || ligne2!=10) {
+				while(ligne2!=1 && ligne2!=2 && ligne2!=3 && ligne2!=4 && ligne2!=5 && ligne2!=6 && ligne2!=7 && ligne2!=8 && ligne2!=9 && ligne2!=10) {
 					out1.println("Valleur incorrecte, veuillez entrer ligne de placement de la tête du bateau (compris entre 1 et 10) : ");
 					strligne2 = in1.readLine();
 					ligne2 = Integer.parseInt(strligne2);
